@@ -8,6 +8,10 @@ This project demonstrates the use of Maven the build tool.
 
 
 3. Using :
+
+http://tutorials.jenkov.com/maven/maven-tutorial.html
+for images & dir structure
+
 https://www.vogella.com/tutorials/EclipseMaven/article.html
 
 used `clean verify` from above in maven run configurations (in eclipse).
