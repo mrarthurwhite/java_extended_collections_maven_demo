@@ -10,11 +10,20 @@ This project demonstrates the use of Maven the build tool.
 3. Using :
 https://www.vogella.com/tutorials/EclipseMaven/article.html
 
+used clean verify from above.
+
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+verify: run any checks to verify the package is valid and meets quality criteria
+clean: cleans up artifacts created by prior builds
+
 Although build fails with error 
 [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
 
 https://java2blog.com/no-compiler-provided-environment-perhaps-running-jre-rather-jdk/
+
 I have added JDK 12 but it does not seem to understand
+
+
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project java-extended-collections: Compilation failure
 [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
 
