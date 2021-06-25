@@ -21,12 +21,13 @@ public class IterableMapDemo {
 		// from https://commons.apache.org/proper/commons-collections/javadocs/api-4.4/index.html
 		 IterableMap<String,Integer> map = new HashedMap<String,Integer>();
 		 map.put("Arthur", 99);
-		 MapIterator<String,Integer> it = map.mapIterator();
-		 while (it.hasNext()) {
-		   String key = it.next();
-		   Integer value = it.getValue();
-		   System.out.println(key + ":" + value);
-		   it.setValue(value + 1);
+		 MapIterator<String,Integer> score = map.mapIterator();
+		 while (score.hasNext()) {
+		   String key = score.next();
+		   Integer value = score.getValue();
+		   System.out.println("Before: " + key + ":" + value);
+		   score.setValue(value + 1);
+		   System.out.println("After: " +score.getKey() + ":" + score.getValue());
 		 }
 	
 		
