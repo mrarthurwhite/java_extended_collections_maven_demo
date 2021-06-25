@@ -10,7 +10,7 @@ This project demonstrates the use of Maven the build tool.
 3. Using :
 https://www.vogella.com/tutorials/EclipseMaven/article.html
 
-used clean verify from above.
+used `clean verify` from above in maven run configurations (in eclipse).
 
 https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 verify: run any checks to verify the package is valid and meets quality criteria
@@ -29,9 +29,11 @@ I have added JDK 12 but it does not seem to understand
 
 After going over this I changed the build path to point to the JDK (strangely was still pointing to a JRE.
 
-4. Still getting an error when building (but program is running)
+4. When getting an error when building (but program is running)
 
 https://stackoverflow.com/questions/53034953/error-source-option-5-is-no-longer-supported-use-6-or-later-on-maven-compile
+
+I used : 
 
 <build>
    <plugins>
