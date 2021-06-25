@@ -13,21 +13,27 @@ https://www.vogella.com/tutorials/EclipseMaven/article.html
 used `clean verify` from above in maven run configurations (in eclipse).
 
 https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+```
 verify: run any checks to verify the package is valid and meets quality criteria
 clean: cleans up artifacts created by prior builds
+```
 
 Although build fails with error 
+```
 [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
-
+```
 https://java2blog.com/no-compiler-provided-environment-perhaps-running-jre-rather-jdk/
 
 I have added JDK 12 but it does not seem to understand
 
 
+```
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project java-extended-collections: Compilation failure
 [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
+```
 
-After going over this I changed the build path to point to the JDK (strangely was still pointing to a JRE.
+After going over this I changed the build path to point to the JDK (strangely eclipse was still pointing to a JRE).
 
 4. When getting an error when building (but program is running)
 
@@ -35,18 +41,19 @@ https://stackoverflow.com/questions/53034953/error-source-option-5-is-no-longer-
 
 I used : 
 
+```
 <build>
    <plugins>
-   <plugin>
+      <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>
         <configuration>
             <source>12</source>
             <target>12</target>
         </configuration>
-    </plugin>
+      </plugin>
    </plugins>
-   </build>
-
+ </build>
+```
 
 
